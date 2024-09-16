@@ -1,0 +1,13 @@
+vesion: "3.8"
+
+networks:
+  monitoring:
+    driver: bridge
+
+services:
+  notes-app: 
+    build:
+      context: ./django-notes-app
+    ports:
+      - "8000:8000"
+    container_name: "notes-app"
